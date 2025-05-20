@@ -1,0 +1,42 @@
+.prose {
+    line-height: 1.8;
+    color: #374151;
+}
+
+.prose p {
+    margin-bottom: 1.5em;
+}
+
+#story {
+    white-space: pre-wrap;
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 640px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.875rem;
+    }
+    
+    .max-w-2xl {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+} 
