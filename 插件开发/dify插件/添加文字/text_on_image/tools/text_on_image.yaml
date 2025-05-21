@@ -1,0 +1,108 @@
+identity:
+  name: text_on_image
+  author: infinity
+  label:
+    en_US: text_on_image
+    zh_Hans: text_on_image
+    pt_BR: text_on_image
+description:
+  human:
+    en_US: A plugin to overlay custom text on images using silicon API.
+    zh_Hans: 基于silicon API的图片文字叠加插件。
+    pt_BR: A plugin to overlay custom text on images using silicon API.
+  llm: A plugin to overlay custom text on images using silicon API.
+parameters:
+  - name: image_url
+    type: string
+    required: true
+    label:
+      en_US: Image URL
+      zh_Hans: 底图链接
+      pt_BR: Image URL
+    human_description:
+      en_US: The URL of the base image.
+      zh_Hans: 需要添加文字的底图链接。
+      pt_BR: The URL of the base image.
+    llm_description: The URL of the base image.
+    form: llm
+  - name: text
+    type: string
+    required: true
+    label:
+      en_US: Text
+      zh_Hans: 文字内容
+      pt_BR: Text
+    human_description:
+      en_US: The text to overlay on the image.
+      zh_Hans: 需要叠加在图片上的文字内容。
+      pt_BR: The text to overlay on the image.
+    llm_description: The text to overlay on the image.
+    form: llm
+  - name: font_size
+    type: number
+    required: true
+    label:
+      en_US: Font Size
+      zh_Hans: 字体大小
+      pt_BR: Font Size
+    human_description:
+      en_US: Font size in px.
+      zh_Hans: 文字字体大小，单位px。
+      pt_BR: Font size in px.
+    llm_description: Font size in px.
+    form: llm
+  - name: color
+    type: string
+    required: true
+    label:
+      en_US: Color
+      zh_Hans: 文字颜色
+      pt_BR: Color
+    human_description:
+      en_US: Text color (e.g. #000000).
+      zh_Hans: 文字颜色（如#000000）。
+      pt_BR: Text color (e.g. #000000).
+    llm_description: Text color (e.g. #000000).
+    form: llm
+  - name: position
+    type: string
+    required: true
+    label:
+      en_US: Position
+      zh_Hans: 文字方位
+      pt_BR: Position
+    human_description:
+      en_US: Text position (e.g. left_top, right_bottom, center, etc.).
+      zh_Hans: 文字在图片上的方位（如left_top/center/right_bottom等）。
+      pt_BR: Text position (e.g. left_top, right_bottom, center, etc.).
+    llm_description: Text position (e.g. left_top, right_bottom, center, etc.).
+    form: llm
+  - name: font_family
+    type: string
+    required: true
+    label:
+      en_US: Font Family
+      zh_Hans: 字体类型
+      pt_BR: Font Family
+    human_description:
+      en_US: Font family (e.g. Arial, 黑体, 宋体, 楷体, etc.).
+      zh_Hans: 文字字体类型（如默认/黑体/宋体/楷体等）。
+      pt_BR: Font family (e.g. Arial, 黑体, 宋体, 楷体, etc.).
+    llm_description: Font family (e.g. Arial, 黑体, 宋体, 楷体, etc.).
+    form: llm
+  - name: opacity
+    type: number
+    required: true
+    label:
+      en_US: Opacity
+      zh_Hans: 透明度
+      pt_BR: Opacity
+    human_description:
+      en_US: Opacity (0-100).
+      zh_Hans: 文字透明度，0-100。
+      pt_BR: Opacity (0-100).
+    llm_description: Opacity (0-100).
+    form: llm
+extra:
+  python:
+    source: tools/text_on_image.py

@@ -1,0 +1,53 @@
+version: 0.0.1
+type: plugin
+author: infinity
+name: text_on_image
+label:
+  en_US: text_on_image
+  ja_JP: text_on_image
+  zh_Hans: text_on_image
+  pt_BR: text_on_image
+description:
+  en_US: A plugin to overlay custom text on images using silicon API.
+  ja_JP: A plugin to overlay custom text on images using silicon API.
+  zh_Hans: A plugin to overlay custom text on images using silicon API.
+  pt_BR: A plugin to overlay custom text on images using silicon API.
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    model:
+      enabled: false
+      llm: false
+      text_embedding: false
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+    node:
+      enabled: false
+    endpoint:
+      enabled: true
+    app:
+      enabled: false
+    storage:
+      enabled: false
+      size: 1024
+plugins:
+  tools:
+    - provider/text_on_image.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: 0.0.1
+created_at: 2025-05-21T17:03:10.789179+08:00
+privacy: PRIVACY.md
+verified: false
