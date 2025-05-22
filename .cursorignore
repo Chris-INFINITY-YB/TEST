@@ -1,0 +1,6 @@
+# Cursor IDE 忽略文件配置
+__pycache__/
+*.pyc
+.DS_Store
+# 确保 .env 文件不被忽略
+!.env 

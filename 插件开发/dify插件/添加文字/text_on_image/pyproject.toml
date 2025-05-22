@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "text_on_image"
+version = "0.1.0"
+description = "A plugin to overlay custom text on images using silicon API"
+requires-python = ">=3.8"
+dependencies = [
+    "dify-plugin>=0.1.0",
+    "requests>=2.31.0"
+] 
